@@ -1,0 +1,61 @@
+# ~/.gitconfig needs this at the beginning:
+# [include]
+#     path = <whereever-this-file-is>/.gitconfig
+# [core]
+#     excludesfile = <home-dir>/.gitignore
+# [user]
+#     email = <e-mail-address>
+#     name = First Last
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    lbr = branch -a
+    lbrv = branch -lvvv
+    gren = grep -n
+    lg = log -p
+    staged = diff --cached
+    cached = diff --cached
+    unstaged = diff
+    both = diff HEAD
+    oneline = log --pretty=oneline
+    amend = commit --amend
+    rull = pull --rebase
+    cp = cherry-pick -x
+    ch = cherry -v
+
+    pl = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[color]
+    ui = true
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[push]
+    default = tracking
+
+[rebase]
+    stat = true
+
+[interactive]
+    singlekey = true
+
+# ENABLE IF YOU HAVE P4MERGE, REMEMBER PATH
+# [merge]
+#     tool = lolmerge # This will be the default merge tool invoked by git mergetool.
+# [mergetool]
+#   keepBackup = false
+#   keepTemporaries = false
+# [mergetool "lolmerge"]
+#   # I put p4merge and DiffMerge in /Applications/Utilities, but you might have them in /Applications.
+#   cmd = /Applications/Utilities/p4merge.app/Contents/Resources/launchp4merge \
+#       "$PWD/$BASE" \
+#       "$PWD/$REMOTE" \
+#       "$PWD/$LOCAL" \
+#       "$PWD/$MERGED"
+#   keepBackup = false
+#   trustExitCode = false
