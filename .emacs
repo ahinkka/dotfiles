@@ -80,6 +80,15 @@
   ; Fill paragraph
   (global-set-key "\C-cf" 'fill-paragraph))
 
+(defun setup-mac-keyboard ()
+  (setq mac-right-option-modifier 'none) ; disable right alt handling by emacs (alt gr keys)
+
+  ;; swap left option and cmd, disable left option
+  (setq mac-option-key-is-meta nil)
+  (setq mac-command-key-is-meta t)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier nil))
+
 ;; Rid of ugly backups
 (setq make-backup-files t)
 (setq version-control t)
