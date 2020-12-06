@@ -1,6 +1,6 @@
 ;; ~/.emacs needs this at the beginning:
 ;; (let
-;;     ((site-init-file "~/Projects/dotfiles/.emacs"))
+;;     ((site-init-file "<wherever-this-file-is>/.emacs"))
 ;;   (message site-init-file)
 ;;   (if (file-readable-p site-init-file)
 ;;       (load site-init-file)
