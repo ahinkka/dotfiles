@@ -89,6 +89,11 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
 
+(defun fix-macports-gnutls ()
+  (require 'gnutls)
+  (add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
+  (setq tls-program '("/opt/local/bin/gnutls-cli --x509cafile %t -p %p %h" "gnutls-cli --x509cafile %t -p %p %h --protocols ssl3")))
+
 ;; Rid of ugly backups
 (setq make-backup-files t)
 (setq version-control t)
