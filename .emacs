@@ -1,10 +1,10 @@
 ;; ~/.emacs needs this at the beginning:
 ;; (let
-;;     ((site-init-file "<wherever-this-file-is>/.emacs"))
-;;   (message site-init-file)
-;;   (if (file-readable-p site-init-file)
-;;       (load site-init-file)
-;;     (message "%s not readable!" site-init-file)))
+;;     ((shared-dot-emacs-file "<wherever-this-file-is>/.emacs"))
+;;   (message shared-dot-emacs-file)
+;;   (if (file-readable-p shared-dot-emacs-file)
+;;       (load shared-dot-emacs-file)
+;;     (message "%s not readable!" shared-dot-emacs-file)))
 
 (package-initialize)
 
