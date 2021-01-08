@@ -38,6 +38,9 @@
 [push]
     default = tracking
 
+[pull]
+    ff = only
+
 [rebase]
     stat = true
 
