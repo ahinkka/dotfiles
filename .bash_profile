@@ -59,7 +59,7 @@ export PS1="\h \[\033[32m\]\$(shorten_pwd 20)\[\033[33m\]\$(parse_git_branch)\[\
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0; $(pwd)\007"'
+    PROMPT_COMMAND='printf "\033]0; $(pwd)\007"'
 
     # Show the currently running command in the terminal title:
     # http://www.davidpashley.com/articles/xterm-titles-with-bash.html
@@ -73,7 +73,7 @@ xterm*|rxvt*)
                 # output them.
                 ;;
             *)
-                echo -ne "\033]0; ${BASH_COMMAND}\007"
+                printf "\033]0; ${BASH_COMMAND}\007"
                 ;;
         esac
     }
