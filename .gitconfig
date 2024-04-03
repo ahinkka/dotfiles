@@ -29,6 +29,7 @@
     re = restore
 
     pl = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lol = !git log --graph --decorate --abbrev-commit --all --pretty='format:%C(auto)%h %d %s %C(green)[%an] %C(bold blue)%ad' --date=relative || true
 
 [color]
     ui = true
